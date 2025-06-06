@@ -1,0 +1,8 @@
+EMAIL="msakhawatali132@gmailo.com"
+PASS="Sak131##"
+MAIL_FROM="msakhawatali131@gmail.com"
+MAIL_PORT=587
+MAIL_SERVER="470165c3c98473a23afd2897f592cebe906b792e"
+MAIL_STARTTLS=True
+MAIL_SSL_TLS=False
+USE_CREDENTIALS=True
