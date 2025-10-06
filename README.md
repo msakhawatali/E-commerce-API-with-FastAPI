@@ -1,32 +1,41 @@
 ````markdown
-# E-commerce API with FastAPI
+<h1 align="center">🛒 E-commerce API with FastAPI</h1>
 
-This is a backend project built with **FastAPI** that provides a RESTful API for an e-commerce system.  
-It includes features like user authentication, product management, and email notifications.
+<p align="center">
+A backend project built with <b>FastAPI</b> that provides RESTful APIs for an e-commerce system.  
+Includes <b>user authentication, product management, and email notifications</b>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue.svg" />
+  <img src="https://img.shields.io/badge/FastAPI-Framework-brightgreen.svg" />
+  <img src="https://img.shields.io/badge/Database-PostgreSQL%2FSQLite-orange.svg" />
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" />
+</p>
 
 ---
 
 ## 🚀 Features
 
-- User signup & login with JWT authentication  
-- Secure password hashing  
-- CRUD operations for Products  
-- User profile management  
-- Email verification & password reset  
-- Role-based access (admin/user)  
-- Input validation & error handling  
+✅ User signup & login with JWT authentication  
+✅ Secure password hashing  
+✅ CRUD operations for Products  
+✅ User profile management  
+✅ Email verification & password reset  
+✅ Role-based access (admin/user)  
+✅ Input validation & error handling  
 
 ---
 
-## 🛠️ Technologies
+## 🛠️ Tech Stack
 
-- [FastAPI](https://fastapi.tiangolo.com/) – Web framework  
-- [Pydantic](https://docs.pydantic.dev/) – Data validation  
-- [SQLAlchemy](https://www.sqlalchemy.org/) – ORM for database  
-- [PostgreSQL / SQLite] – Database (configurable)  
-- [JWT / OAuth2] – Authentication  
-- [SMTP / Email] – Email notifications  
-- [Uvicorn](https://www.uvicorn.org/) – ASGI server  
+- ⚡ **FastAPI** – High performance web framework  
+- 📦 **Pydantic** – Data validation  
+- 🗄️ **SQLAlchemy** – ORM for database  
+- 🐘 **PostgreSQL / SQLite** – Database  
+- 🔐 **JWT / OAuth2** – Authentication  
+- 📧 **SMTP / Jinja2** – Email notifications  
+- 🚀 **Uvicorn** – ASGI server  
 
 ---
 
@@ -56,7 +65,7 @@ pip install -r requirements.txt
 
 ### 4. Environment Variables
 
-Create a `.env` file in the project root and configure your variables:
+Create a `.env` file in the project root:
 
 ```env
 SECRET_KEY=your_secret_key
@@ -79,27 +88,26 @@ DATABASE_URL=sqlite:///./app.db
 uvicorn main:app --reload
 ```
 
-Server will run at: `http://127.0.0.1:8000`
-
-* Swagger UI: `http://127.0.0.1:8000/docs`
-* Redoc: `http://127.0.0.1:8000/redoc`
+Server → `http://127.0.0.1:8000`
+Swagger UI → `http://127.0.0.1:8000/docs`
+Redoc → `http://127.0.0.1:8000/redoc`
 
 ---
 
 ## 📌 API Endpoints
 
-| Method | Endpoint                  | Description                 | Auth Required |
-| ------ | ------------------------- | --------------------------- | ------------- |
-| POST   | `/auth/signup`            | Register a new user         | No            |
-| POST   | `/auth/login`             | Login and get tokens        | No            |
-| GET    | `/users/me`               | Get current user profile    | Yes           |
-| POST   | `/password-reset`         | Send password reset email   | No            |
-| POST   | `/password-reset/confirm` | Confirm password reset      | No            |
-| GET    | `/products/`              | List all products           | No            |
-| GET    | `/products/{id}`          | Get product details         | No            |
-| POST   | `/products/`              | Create product (Admin only) | Yes           |
-| PUT    | `/products/{id}`          | Update product (Admin only) | Yes           |
-| DELETE | `/products/{id}`          | Delete product (Admin only) | Yes           |
+| Method   | Endpoint                  | Description                 | Auth |
+| -------- | ------------------------- | --------------------------- | ---- |
+| `POST`   | `/auth/signup`            | Register a new user         | ❌    |
+| `POST`   | `/auth/login`             | Login & get token           | ❌    |
+| `GET`    | `/users/me`               | Get current user profile    | ✅    |
+| `POST`   | `/password-reset`         | Send password reset email   | ❌    |
+| `POST`   | `/password-reset/confirm` | Confirm password reset      | ❌    |
+| `GET`    | `/products/`              | List all products           | ❌    |
+| `GET`    | `/products/{id}`          | Get product details         | ❌    |
+| `POST`   | `/products/`              | Create product (Admin only) | ✅    |
+| `PUT`    | `/products/{id}`          | Update product (Admin only) | ✅    |
+| `DELETE` | `/products/{id}`          | Delete product (Admin only) | ✅    |
 
 ---
 
@@ -107,22 +115,20 @@ Server will run at: `http://127.0.0.1:8000`
 
 ```
 .
-├── main.py             # Application entry point
+├── main.py             # Entry point
 ├── models.py           # Database models
 ├── routers/            # All API routes
 ├── schemas/            # Pydantic schemas
 ├── templates/          # Email templates
-├── emails.py           # Email handling logic
-├── requirements.txt    # Project dependencies
-├── .env.example        # Example environment variables
+├── emails.py           # Email logic
+├── requirements.txt    # Dependencies
+├── .env.example        # Env variables
 └── README.md           # Documentation
 ```
 
 ---
 
 ## ✅ Testing
-
-If tests are included, run them with:
 
 ```bash
 pytest
@@ -135,25 +141,16 @@ pytest
 Contributions are welcome!
 
 1. Fork the repository
-2. Create a new branch (`git checkout -b feature/xyz`)
-3. Commit your changes
-4. Push the branch
-5. Submit a Pull Request
+2. Create a branch (`git checkout -b feature/xyz`)
+3. Commit changes
+4. Push to branch
+5. Open a Pull Request
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** – feel free to use and modify.
+This project is licensed under the **MIT License**.
 
-```
-MIT License
-
-Copyright (c) 2025
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-...
-```
-
-```
+<p align="center">Made with ❤️ using FastAPI</p>
 ```
