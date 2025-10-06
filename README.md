@@ -1,4 +1,3 @@
-````markdown
 <h1 align="center">🛒 E-commerce API with FastAPI</h1>
 
 <p align="center">
@@ -153,4 +152,4 @@ Contributions are welcome!
 This project is licensed under the **MIT License**.
 
 <p align="center">Made with ❤️ using FastAPI</p>
-```
+
